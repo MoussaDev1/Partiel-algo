@@ -20,6 +20,8 @@ def astar(graph, start, goal, coords):
 
         for city in graph:
             if city not in city_visited:
+                # g = distance du distant parcouru du noeud de départ au noeud actuel
+                # h = distance heuristique estimée du noeud actuel au noeud final
                 g = distance_parcourus[city]
                 h = distance_euclidienne(city, goal, coords)
                 f = g + h
